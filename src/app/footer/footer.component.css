@@ -1,0 +1,16 @@
+.footer {
+  background-color:#e5e5e5;
+  padding:5px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+.footer-text{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  text-align:center;
+}
+.author{
+  font-weight: bold;
+  font-style: italic;
+}

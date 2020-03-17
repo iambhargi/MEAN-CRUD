@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xl-12">
+      <mat-card>
+        <form class="example-form" [formGroup]="form" (submit)="onSaveUser()">
+          <mat-form-field class="full-width-field">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="eg. Bhargav Patel" formControlName="name">
+            <mat-error *ngIf="form.get('name').invalid && form.get('name').touched">Enter Name*</mat-error>
+          </mat-form-field>
+          <br>
+          <mat-form-field class="full-width-field">
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender">
+              <mat-option *ngFor="let gender of genders" [value]="gender">
+                {{gender}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br>
+          <mat-form-field class="full-width-field">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email" placeholder="eg. iambhargi@gmail.com">
+            <mat-error *ngIf="form.get('email').invalid && form.get('email').touched">Enter Email*</mat-error>
+          </mat-form-field>
+          <br>
+          <mat-form-field class="full-width-field">
+            <mat-label>Mobile</mat-label>
+            <input matInput formControlName="mobile" placeholder="eg. 9974488495">
+            <mat-error *ngIf="form.get('mobile').invalid && form.get('mobile').touched">Enter Mobile*</mat-error>
+          </mat-form-field>
+          <br>
+          <button mat-raised-button color="primary" type="submit" (click)="showSnakbar()">Save User</button>
+        </form>
+      </mat-card>
+
+    </div>
+  </div>
+</div>

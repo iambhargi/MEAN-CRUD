@@ -1,0 +1,20 @@
+.page-header{
+  text-align: center;
+}
+.btn{
+  margin-right: 5px;
+}
+
+.mat-card{
+  overflow: scroll;
+  width: auto;
+  height: 460px;
+}
+.btnback{
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.info-text{
+  text-align: center; 
+}

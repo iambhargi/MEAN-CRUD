@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xl-12">
+      <mat-card>
+        <p class="info-text mat-body-1" *ngIf="users.length <= 0">No Users added yet!</p>
+        <mat-accordion multi="true" *ngIf="users.length > 0">
+          <mat-expansion-panel *ngFor="let user of users">
+            <mat-expansion-panel-header>
+              <h5><b>Name : &nbsp;</b> <i>{{ user.name }}</i> </h5>
+            </mat-expansion-panel-header>
+            <p><b>Gender : &nbsp;</b>{{ user.gender }}</p>
+            <p><b>Mobile : &nbsp;</b>{{ user.mobile }}</p>
+            <p><b>Email : &nbsp;</b>{{ user.email }}</p>
+            <mat-action-row>
+              <button mat-raised-button color="accent" [routerLink]="['/edit', user.id]">EDIT</button>
+              <button mat-raised-button color="warn" (click)="onDelete(user.id)">DELETE</button>
+            </mat-action-row>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card>
+      <div class="btnback">
+        <button class="btn" [routerLink]="['/']"><img
+            src="https://cdn2.iconfinder.com/data/icons/simple-circular-icons-line/84/Left_Carrot-512.png"
+            height="100px" width="auto" alt=""></button>
+      </div>
+    </div>
+  </div>
+</div>
